@@ -1,0 +1,12 @@
+library(readxl)
+data_ex <- read_excel("data_ex.xlsx", sheet = "Sheet1")
+View(data_ex)
+
+ID <- c(1,2,3,4,5)
+SEX <- c("F","M","F","M","F")
+data_ex1 <- data.frame(ID = ID, SEX = SEX)
+write.csv(data_ex1, file = "test.csv")
+write.table(data_ex1,file = "test.txt")
+save(data_ex1, file = "data_exl.rda")
+load("data_exl.rda")
+View(data_ex1)
